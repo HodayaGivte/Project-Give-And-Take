@@ -1,5 +1,6 @@
 # Node backend
 node/node_modules/
+node/serviceAccountKey.json
 
 # React frontend
 project/firebase/node_modules/
@@ -22,3 +23,4 @@ project/firebase/.env
 .DS_Store
 .vscode/
 .idea/
+
