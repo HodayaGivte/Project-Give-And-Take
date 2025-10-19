@@ -1,0 +1,24 @@
+# Node backend
+node/node_modules/
+
+# React frontend
+project/firebase/node_modules/
+project/firebase/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+node/.env
+project/firebase/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+.DS_Store
+.vscode/
+.idea/

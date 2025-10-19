@@ -1,0 +1,4 @@
+.input {
+    @apply text-right font-sans bg-[#f1f0f0] w-[280px] h-[30px] rounded-[6px] border border-[#bd02ca];
+}
+
