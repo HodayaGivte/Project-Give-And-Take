@@ -21,7 +21,7 @@ const Category = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products');
+        const response = await axios.get('https://project-give-and-take.onrender.com/products');
         const allItems = response.data.data;
         console.log("כל החפצים",allItems)
         const categoryItems = allItems.filter(item => item.category === category);
