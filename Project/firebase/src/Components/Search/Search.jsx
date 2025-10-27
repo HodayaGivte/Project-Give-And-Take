@@ -15,7 +15,7 @@ const Search = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products'); 
+        const response = await axios.get('https://project-give-and-take.onrender.com/products'); 
         console.log(response.data); // הוספת הדפסת הנתונים
 
         // קבלת המערך מתוך המפתח 'data'

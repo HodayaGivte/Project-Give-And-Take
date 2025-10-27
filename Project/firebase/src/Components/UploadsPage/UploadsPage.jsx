@@ -42,7 +42,7 @@ const UploadsPage = () => {
         }
       
       try {
-        const response = await axios.get(`http://localhost:5000/products/${userId}`);
+        const response = await axios.get(`https://project-give-and-take.onrender.com/products/${userId}`);
         console.log("Fetched products:", response.data)// בדיקה
         setProducts(response.data); // שמירת החפצים ב-state
       } catch (error) {

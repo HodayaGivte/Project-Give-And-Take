@@ -25,7 +25,7 @@ const SaveObject = () => {
             if (favoriteIds && favoriteIds.length > 0) {
               try {
                 // קריאה לשרת כדי לקבל את פרטי החפצים ממונגו
-                const response = await fetch('http://localhost:5000/products/saveobject', {
+                const response = await fetch('https://project-give-and-take.onrender.com/products/saveobject', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',

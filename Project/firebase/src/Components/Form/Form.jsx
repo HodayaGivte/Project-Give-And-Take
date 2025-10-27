@@ -44,7 +44,7 @@ export default function Form({ productToEdit, setProductToEdit, isEditing, setIs
     const fetchProduct = async () => {
       if (id) {
         try {
-          const response = await axios.get(`http://localhost:5000/products/product/${id}`);
+          const response = await axios.get(`https://project-give-and-take.onrender.com/products/product/${id}`);
           const existingProduct = response.data;
           // עדכון השדות עם הנתונים הקיימים
           if (existingProduct) {
@@ -127,7 +127,7 @@ export default function Form({ productToEdit, setProductToEdit, isEditing, setIs
       console.log(avatarUrl)
     // אם אנחנו במצב עריכה, נביא את המידע הקיים
       if (isEditing && productToEdit && productToEdit._id) {
-        await axios.put(`http://localhost:5000/products/${productToEdit._id}`, {
+        await axios.put(`https://project-give-and-take.onrender.com/products/${productToEdit._id}`, {
           firstName,
           lastName,
           phone,
@@ -141,7 +141,7 @@ export default function Form({ productToEdit, setProductToEdit, isEditing, setIs
           userId, 
         });
       } else {
-        await axios.post("http://localhost:5000/products", {
+        await axios.post("https://project-give-and-take.onrender.com/products", {
           firstName,
           lastName,
           phone,
