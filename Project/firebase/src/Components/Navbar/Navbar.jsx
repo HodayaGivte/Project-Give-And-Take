@@ -27,7 +27,7 @@ const Navbar = () => {
       const fetchSuggestions = async () => {
         if (searchTerm) {
           try {
-            const response = await axios.get('http://localhost:5000/products'); // קבלת כל החפצים
+            const response = await axios.get('https://project-give-and-take.onrender.com/products'); // קבלת כל החפצים
             const itemsArray = response.data.data;
   
             // סינון הצעות כך שיכילו את מחרוזת החיפוש שהוקלדה

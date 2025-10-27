@@ -15,7 +15,7 @@ const Oneobject = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/products/product/${productId}`);
+        const response = await axios.get(`https://project-give-and-take.onrender.com/products/product/${productId}`);
         setProduct(response.data);
         setLoading(false);
       } catch (error) {
