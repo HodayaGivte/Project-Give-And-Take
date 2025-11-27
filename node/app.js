@@ -14,15 +14,30 @@ app.use(cors());
 //שימוש בנתיבים
 app.use('/products', productsRoute)
 
-app.listen(5000,() => {
-  console.log('Server is running on port 5000...');
-  mongoose
-    .connect(connectionString)
-    .then(() => console.log("connected to database"))
-    .catch((err) => console.log("eror", err));
+// בדיקה
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
 });
 
 
+// ייצוא זמני של ה-app כדי שהבדיקות יעבדו
+module.exports = app;
+
+
+// מפעילים את השרת וחיבור DB רק אם זה לא מצב בדיקה
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}...`);
+    mongoose
+      .connect(connectionString)
+      .then(() => console.log("connected to database"))
+      .catch((err) => console.log("error", err));
+  });
+}
+
+
+//const PORT = process.env.PORT || 5000; // אם אין פורט מסופק, משתמשים ב-5000
+//const PORT = process.env.PORT;
 
 
 
