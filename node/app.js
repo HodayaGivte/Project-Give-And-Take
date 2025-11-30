@@ -23,6 +23,7 @@ app.get('/health', (req, res) => {
 // ייצוא זמני של ה-app כדי שהבדיקות יעבדו
 module.exports = app;
 
+const PORT = process.env.PORT || 5000; // אם אין פורט מסופק, משתמשים ב-5000
 
 // מפעילים את השרת וחיבור DB רק אם זה לא מצב בדיקה
 if (process.env.NODE_ENV !== 'test') {
