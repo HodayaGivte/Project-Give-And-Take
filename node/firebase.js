@@ -1,14 +1,23 @@
 // Import Admin SDK
 const admin = require("firebase-admin");
 
-// Load the service account key
-const serviceAccount = require("./serviceAccountKey.json");
 
-// Initialize Firebase Admin with service account credentials
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  storageBucket: "give-and-take-57b2f.appspot.com",
-});
+// Load service account ONLY when not testing
+let serviceAccount = null;
+if (process.env.NODE_ENV !== "test") {
+  serviceAccount = require("./serviceAccountKey.json");
+}
+
+// Initialize Firebase Admin only if not in test mode
+if (!admin.apps.length && process.env.NODE_ENV !== "test") {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    storageBucket: "give-and-take-57b2f.appspot.com",
+  });
+} else if (!admin.apps.length) {
+  // During tests: initialize without real credentials
+  admin.initializeApp();
+}
 
 // Firebase services setup
 const auth = admin.auth();

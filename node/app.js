@@ -37,8 +37,6 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 
-//const PORT = process.env.PORT || 5000; // אם אין פורט מסופק, משתמשים ב-5000
-//const PORT = process.env.PORT;
 
 
 

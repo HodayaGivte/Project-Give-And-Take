@@ -1,3 +1,6 @@
+jest.mock('firebase-admin');
+
+
 const request = require('supertest');
 const app = require('../app'); // ודאי שהנתיב נכון ל-app.js שלך
 
