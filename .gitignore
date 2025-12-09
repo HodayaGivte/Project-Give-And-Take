@@ -1,4 +1,6 @@
 # Node backend
+node/coverage/
+coverage/
 node/node_modules/
 node/serviceAccountKey.json
 
