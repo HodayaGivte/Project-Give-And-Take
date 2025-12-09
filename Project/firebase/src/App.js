@@ -11,6 +11,7 @@ import Form from './Components/Form/Form';
 import SaveObject from './Components/SaveObject/SaveObject';
 import UploadsPage from './Components/UploadsPage/UploadsPage';
 import Search from './Components/Search/Search';
+import UsersManagement from './Components/UsersManagement/UsersManagement';
 
 //items
 import HomePage from './Components/Navbar/Items/HomePage/HomePage';
@@ -45,7 +46,7 @@ function App() {
          <Route path='/search/:itemName' element={<Search/>}></Route>
          <Route path='/saveobject' element={<SaveObject/>}></Route>
          <Route path='/uploadspage' element={<UploadsPage/>}></Route>
-
+         <Route path='/usersmanagement' element={<UsersManagement/>}></Route>
 
          <Route 
           path='/form' 
