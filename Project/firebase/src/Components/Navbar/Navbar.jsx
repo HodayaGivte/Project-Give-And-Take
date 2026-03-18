@@ -83,12 +83,6 @@ const Navbar = () => {
    <>
      <nav>
        <div className='container flex justify-between items-center  py-1 shadow-lg'>
-          {/* manage */}
-          <Link to= '../../UsersManagement' title="ניהול משתמשים">
-            <div className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition flex items-center justify-center">
-              <FaUserTie className="text-xl" />
-            </div>
-          </Link>
 
           {/* logo */}
           <Link to='/Item/homepage' title="מעבר לדף בית">
