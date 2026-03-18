@@ -11,7 +11,7 @@ import Form from './Components/Form/Form';
 import SaveObject from './Components/SaveObject/SaveObject';
 import UploadsPage from './Components/UploadsPage/UploadsPage';
 import Search from './Components/Search/Search';
-import UsersManagement from './Components/UsersManagement/UsersManagement';
+import UsersManagement from './Components/Navbar/Items/UsersManagement/UsersManagement';
 
 //items
 import HomePage from './Components/Navbar/Items/HomePage/HomePage';
