@@ -7,7 +7,6 @@ import { IoMdStarOutline } from "react-icons/io";
 import { LuAmpersand } from "react-icons/lu";
 import { IoIosLogOut } from "react-icons/io";
 import { MdMenu } from "react-icons/md";
-import { FaUserTie } from 'react-icons/fa';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)

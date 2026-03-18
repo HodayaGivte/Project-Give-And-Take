@@ -77,7 +77,6 @@ function App() {
             <Route path='homepage' element={<HomePage/>}/>
             <Route path='oneobject/:productId' element={<OneObject/>}></Route>
             <Route path='category/:category' element={<Category/>}/>
-
          </Route>
 
        </Routes>
